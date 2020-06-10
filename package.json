@@ -25,12 +25,14 @@
     "express": "^4.17.1",
     "mongodb": "^3.5.8",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-hot-loader": "^4.12.21"
+    "react-dom": "^16.3.1",
+    "react-hot-loader": "^4.1.2",
+    "react-scripts": "^3.4.1",
+    "typescript": "^3.9.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.1.0",
+    "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",

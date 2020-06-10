@@ -1,16 +1,22 @@
 const path = require('path')
 const webpack = require('webpack')
 const CURRENT_WORKING_DIR = process.cwd()
+const nodeExternals = require('webpack-node-externals')
 const config = {
-    mode: "production",
+    name: "server",
+     //mode option will be passed as required when running for either
+     //development or production
     entry: [
-        path.join(CURRENT_WORKING_DIR, 'client/main.js')
+        path.join(CURRENT_WORKING_DIR, './server/server.js')
     ],
+    target: "node",
     output: {
         path: path.join(CURRENT_WORKING_DIR, '/dist'),
-        filename: 'bundle.js',
-        publicPath: "/dist/"
+        filename: 'server.generated.js',
+        publicPath: "/dist/",
+        libraryTarget: "commonjs2"
     },
+    externals: [nodeExternals()],
     module: {
         rules: [
             {
