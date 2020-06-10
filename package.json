@@ -1,0 +1,44 @@
+{
+  "name": "social-media-app",
+  "version": "1.0.0",
+  "description": "Simple Social Media App with MERN",
+  "main": "index.js",
+  "scripts": {
+    "development": "nodemon",
+    "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
+    "start": "NODE_ENV=production node ./dist/server.generated.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chika-Jinanwa/social-media-app.git"
+  },
+  "author": "Chika Jinanwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chika-Jinanwa/social-media-app/issues"
+  },
+  "homepage": "https://github.com/Chika-Jinanwa/social-media-app#readme",
+  "dependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.8",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hot-loader": "^4.12.21"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.17.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
