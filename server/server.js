@@ -3,7 +3,7 @@ import devBundle from './devBundle' //comment out when in production mode
 import path from 'path'
 import templater from './../template'
 import {MongoClient} from 'mongodb'
-const url = process.env.MONGODB_URI ||  'mongodb://localhost:27017/mernSimpleSetup'
+const url = process.env.MONGODB_URI ||  'mongodb://localhost:27017/social-media-app'
 
 const app = express()
 devBundle.compile(app) //comment out when in production mode
