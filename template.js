@@ -6,7 +6,7 @@ export default () => {
           <title>Social-Media-App</title>
         </head>
         <body>
-          <div id="root"></div>
+          <div id="root">Anus</div>
           <script type="text/javascript" src="/dist/bundle.js"></script>
         </body>
       </html>`
