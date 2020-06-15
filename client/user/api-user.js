@@ -39,7 +39,7 @@ list()
         console.log(err)
     })
 
-
+//Methods that require authorization
 
 async function read(params,credentials) {
     let response = await fetch('/api/users/'+ params.userId,{
