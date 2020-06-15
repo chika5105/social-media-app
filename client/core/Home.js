@@ -37,7 +37,7 @@ class Home extends Component {
               Welcome to the Social Media Skeleton home page.
             </Typography>
           </CardContent>
-        </Card>
+        </Card>    
     )
   }
 }
@@ -46,4 +46,4 @@ Home.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(Home)
+export default withStyles(styles)(Home);

@@ -22,9 +22,17 @@ const config = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                use: [
-                    'babel-loader'
-                ]
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets:['react', 'es2015', 'stage-2']
+                    }
+                }
+                
+            },
+            {
+                test: /\.(ttf|eot|svg|gif|jpg|png)(\?[\s\S]+)?$/,
+                use: 'file-loader'
             }
         ]
     }
