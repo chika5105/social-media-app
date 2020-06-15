@@ -31,7 +31,7 @@ import errorHandler from './../helpers/dbErrorHandler'
 
  //execute function when route :userId param before propagating to next
  const userByID = (req,res,next,id)=> {
-     User.findByID(id).exec((err,user)=>{
+     User.findById(id).exec((err,user)=>{
          if (err || !user)
             return res.status('400').json({
                 error: "User not found"
