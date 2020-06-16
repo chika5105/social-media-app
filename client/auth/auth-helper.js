@@ -1,7 +1,7 @@
 import { signout } from './api-auth.js'
 
 const auth = {
-  isAuthenticated() { //retrieve credentials if signed in
+  isAuthenticated() {
     if (typeof window == "undefined")
       return false
 
@@ -10,17 +10,17 @@ const auth = {
     else
       return false
   },
-  authenticate(jwt, cb) { //save credentials on successful signin
+  authenticate(jwt, cb) {
     if (typeof window !== "undefined")
       sessionStorage.setItem('jwt', JSON.stringify(jwt))
     cb()
   },
-  signout(cb) { //delete credentials and signout
+  signout(cb) {
     if (typeof window !== "undefined")
       sessionStorage.removeItem('jwt')
     cb()
     signout().then((data) => {
-      document.cookie = "t=; expires=Thu, 01 Jan 2050 00:00:00 UTC; path=/;"
+      document.cookie = "t=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
     })
   }
 }

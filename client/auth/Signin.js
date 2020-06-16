@@ -76,7 +76,7 @@ class Signin extends Component {
     }
     const {redirectToReferrer} = this.state
     if (redirectToReferrer) {
-      return (<Redirect to={from}/>) //redirect to last location or Home at the root
+      return (<Redirect to={from}/>)
     }
 
     return (
@@ -106,4 +106,4 @@ Signin.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(Signin);
+export default withStyles(styles)(Signin)
