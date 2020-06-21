@@ -41,6 +41,7 @@ class EditProfile extends Component {
     super()
     this.state = {
       name: '',
+      about: '',
       email: '',
       password: '',
       about: '',
@@ -109,6 +110,7 @@ class EditProfile extends Component {
             margin="normal"
           /><br/>
           <TextField id="password" type="password" label="Password" className={classes.textField} value={this.state.password} onChange={this.handleChange('password')} margin="normal"/>
+
           <br/> {
             this.state.error && (<Typography component="p" color="error">
               <Icon color="error" className={classes.error}>error</Icon>

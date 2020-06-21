@@ -26,7 +26,7 @@ import errorHandler from './../helpers/dbErrorHandler'
              })
          }
          res.json(users)
-     }).select('name email updated created')
+     }).select('name email updated created about')
  }
 
  //execute function when route :userId param before propagating to next
@@ -51,7 +51,7 @@ import errorHandler from './../helpers/dbErrorHandler'
  //func to update a single user
  const update = (req,res,next) => {
      let user = req.profile
-     user = _.extend(user,req.body)
+     user = _.extend(user,fields)
      user.updated = Date.now()
      user.save((err) => {
          if (err) {
