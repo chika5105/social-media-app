@@ -49,7 +49,7 @@ class Profile extends Component {
       }
     })
   }
-  componentWillReceiveProps = (props) => {
+  UNSAFE_componentWillReceiveProps = (props) => {
     this.init(props.match.params.userId)
   }
   componentDidMount = () => {
@@ -87,7 +87,7 @@ class Profile extends Component {
           </ListItem>
           <Divider/>
           <ListItem>
-            <ListItemText primary={"Joined: " + (
+            <ListItemText primary={this.state.user.about} secondary= {"Joined: " + (
               new Date(this.state.user.created)).toDateString()}/>
           </ListItem>
         </List>
